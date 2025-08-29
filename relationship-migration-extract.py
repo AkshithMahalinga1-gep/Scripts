@@ -133,7 +133,36 @@ if __name__ == "__main__":
                 "internalDocumentId": 1,
                 "dueDiligencePhase": 1,
             }
-        }
+        },
+         "Forms": {
+            "collection": "form_1663277990",
+            "filter": { "isDeleted": False, bulkprocessId:{$nin:["",null]}},
+            "projection": {
+                sourceFormDocumentNumber: 1,
+                dueDilligencePhase: 1,
+                responderInformation: 1,
+               "additionalDetails.launchDate": 1,
+               "additionalDetails.firstCompletionDate": 1, 
+                sourceFormInternalDocId :1, 
+                supplierRSAId : 1, 
+                taskDetails :1,
+                bulkprocessId: 1
+            }
+          },
+        "Recurrence": {
+            "collection": "manageRecurrence_1671208142",
+            "filter": { "isDeleted": False, bulkprocessId:{$nin:["",null]}},
+            "projection": {
+                documentNumber : 1, 
+                           source: 1, 
+                           "recurrenceCycleDetails.nextLaunchDate" : 1, 
+                           "recurrenceDetails.recurrenceFromOcurrence" : 1,                
+                           "recurrenceDetails.recurrenceType" : 1, 
+                           masterFormInternalDocumentId : 1, 
+                           masterFormName : 1, 
+                           manageRecurrenceId : 1}
+          }
+        
     }
 
     run_queries_and_export_to_excel(connection_string, database_name, queries, "mongo_extract.xlsx")
