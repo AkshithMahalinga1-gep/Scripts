@@ -137,7 +137,7 @@ def run_queries_and_export_to_excel(connection_string, database_name, queries, o
 # Example usage
 # -------------------------------
 if __name__ == "__main__":
-    connection_string = "mongodb+srv://uatleoustenantdocteamsro:900aV2aJEQkF9p2W@uat-us-leo-tenant-2.cnkwb.mongodb.net/?ssl=true&authSource=admin&retryWrites=true&readPreference=secondary&readPreferenceTags=nodeType:ANALYTICS&w=majority&wtimeoutMS=5000&readConcernLevel=majority&retryReads=true&appName=docteamro"
+    connection_string = ""
     database_name = "uatdomainmodeladobesandbox"
     if args.fetchAll:
         bulkProcessIds = {"$nin" : ["",None]}
