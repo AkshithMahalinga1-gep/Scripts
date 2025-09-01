@@ -82,7 +82,7 @@ def fetch_api_data(internal_document_ids):
         }
     }
     run_resp = requests.post(
-        "https://leoaksuat.gep.com/leo-storage-dataservice/api/v1/StorageService/Run",
+        "",
         headers=headers, json=payload
     )
     run_resp.raise_for_status()
