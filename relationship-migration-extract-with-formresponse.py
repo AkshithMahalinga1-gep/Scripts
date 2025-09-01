@@ -55,7 +55,7 @@ def flatten_documents(docs):
 def fetch_api_data(internal_document_ids):
     # 1. Get token
     token_resp = requests.post(
-        "https://api-smartuat.gep.com/SmartInterfaceAPI/api/Common/GetToken",
+        "",
         json={"bpc": 70022705}
     )
     token_resp.raise_for_status()
